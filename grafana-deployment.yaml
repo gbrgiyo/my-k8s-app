@@ -30,10 +30,9 @@ metadata:
   name: grafana
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
-    nodePort: 30001
   selector:
     app: grafana
